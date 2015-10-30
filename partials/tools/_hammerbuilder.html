@@ -1,0 +1,267 @@
+<h4 class="page-header">Hammer Builder</h4>
+<form class="form" ng-init="Init();CalculateTraining();">
+    <!-- Tribe & Duration -->
+    <div class="row">
+        <!-- Tribe Selector -->
+        <div class="form-group col-md-7 col-sm-12">
+            <label class="control-label col-sm-4">{{ 'TEXTS.HB.TRIBE_SELECT' | translate }} : </label>
+            <div class="input-group col-sm-8">
+                <div class="btn-group">
+                    <label class="btn btn-default" ng-model="tribe" ng-change="CalculateTraining();" uib-btn-radio="'ROMAN'"><i class="tribe-roman-big"></i> {{ 'TRIBE.ROMANS' | translate }}</label>
+                    <label class="btn btn-default" ng-model="tribe" ng-change="CalculateTraining();" uib-btn-radio="'TEUTON'"><i class="tribe-teuton-big"></i> {{ 'TRIBE.TEUTONS' | translate }}</label>
+                    <label class="btn btn-default" ng-model="tribe" ng-change="CalculateTraining();" uib-btn-radio="'GAUL'"><i class="tribe-gaul-big"></i> {{ 'TRIBE.GAULS' | translate }}</label>
+                </div>
+            </div>
+        </div>
+        <!-- Duration Setter -->
+        <div class="form-group col-md-5 col-sm-12">
+        <label class="control-label col-sm-4">{{ 'TEXTS.HB.DURATION_SET' | translate }} : </label>
+        <div class="input-group col-sm-8">
+            <input type="text" ng-model="duration.value" placeholder="0" class="form-control" size="4" ng-change="CalculateTraining();"/>
+            <span class="input-group-addon">&times;</span>
+            <select ng-model="duration.type" class="form-control" ng-change="CalculateTraining();">
+                <option value="hour">{{ 'TEXTS.DURATIONS.HOUR' | translate }}</option>
+                <option value="day">{{ 'TEXTS.DURATIONS.DAY' | translate }}</option>
+                <option value="week">{{ 'TEXTS.DURATIONS.WEEK' | translate }}</option>
+                <option value="month">{{ 'TEXTS.DURATIONS.MONTH' | translate }}</option>
+                <option value="year">{{ 'TEXTS.DURATIONS.YEAR' | translate }}</option>
+            </select>
+        </div>
+    </div>
+    </div>
+    <!-- Infantry -->
+    <div class="row">
+        <!-- Barracks -->
+        <div class="form-group col-md-3 col-sm-12">
+            <label class="control-label col-sm-12">{{ 'TEXTS.HB.BARRACKS' | translate }} {{ 'TEXTS.TR.LEVEL' | translate }}</label>
+            <div class="input-group col-sm-12">
+                <a class="btn btn-default input-group-addon" role="button" ng-click="barracks = 0;CalculateTraining();">0</a>
+                <a class="btn btn-default input-group-addon" role="button" ng-click="barracks = barracks - 1;CalculateTraining();"><i class="fa fa-fw fa-minus"></i></a>
+                <input type="number" class="form-control text-center" ng-model="barracks" placeholder="0" min="0" max="20" ng-change="CalculateTraining();"/>
+                <a class="btn btn-default input-group-addon" role="button" ng-click="barracks = barracks + 1;CalculateTraining();"><i class="fa fa-fw fa-plus"></i></a>
+                <a class="btn btn-default input-group-addon" role="button" ng-click="barracks = 20;CalculateTraining();">20</a>
+            </div>
+        </div>
+        <!-- Great Barracks -->
+        <div class="form-group col-md-3 col-sm-12">
+            <label class="control-label col-sm-12">{{ 'TEXTS.HB.GREAT_BARRACKS' | translate }} {{ 'TEXTS.TR.LEVEL' | translate }}</label>
+            <div class="input-group col-xs-12">
+                <a class="btn btn-default input-group-addon" role="button" ng-click="gbarracks = 0;CalculateTraining();">0</a>
+                <a class="btn btn-default input-group-addon" role="button" ng-click="gbarracks = gbarracks -1;CalculateTraining();"><i class="fa fa-fw fa-minus"></i></a>
+                <input type="number" class="form-control text-center" ng-model="gbarracks" placeholder="0" min="0" max="20" ng-change="CalculateTraining();"/>
+                <a class="btn btn-default input-group-addon" role="button" ng-click="gbarracks = gbarracks +1;CalculateTraining();"><i class="fa fa-fw fa-plus"></i></a>
+                <a class="btn btn-default input-group-addon" role="button" ng-click="gbarracks = 20;CalculateTraining();">20</a>
+            </div>
+        </div>
+        <!-- Repartition -->
+        <div class="form-group col-md-6 col-sm-12">
+            <label class="control-label col-sm-12">{{ 'TEXTS.HB.INFANTRY' | translate }} {{ 'TEXTS.HB.REPARTITION' | translate }}</label>
+            <div class="input-group col-sm-12" ng-if="tribe === 'TEUTON'">
+                <span class="input-group-addon"><i class="teuton-unit-01-small" uib-tooltip="{{ 'TROOPS_NAME.TEUTON_01' | translate }}"></i></span>
+                <span class="input-group-addon">{{100 - ratios.i}}</span>
+                <input type="range" class="form-control text-center" ng-model="ratios.i" ng-change="CalculateTraining();"/>
+                <span class="input-group-addon">{{ratios.i}}</span>
+                <span class="input-group-addon"><i class="teuton-unit-03-small" uib-tooltip="{{ 'TROOPS_NAME.TEUTON_03' | translate }}"></i></span>
+            </div>
+            <div class="input-group col-sm-12" ng-if="tribe === 'GAUL'"><span class="input-group-addon"><i class="gaul-unit-02-small" uib-tooltip="{{ 'TROOPS_NAME.GAUL_02' | translate }}"></i></span></div>
+            <div class="input-group col-sm-12" ng-if="tribe === 'ROMAN'"><span class="input-group-addon"><i class="roman-unit-03-small" uib-tooltip="{{ 'TROOPS_NAME.ROMAN_03' | translate }}"></i></span></div>
+        </div>
+    </div>
+    <!-- Cavalry -->
+    <div class="row">
+        <!-- Stable -->
+        <div class="form-group col-md-3 col-sm-12">
+            <label class="control-label col-sm-12">{{ 'TEXTS.HB.STABLE' | translate }} {{ 'TEXTS.TR.LEVEL' | translate }}</label>
+            <div class="input-group col-sm-12">
+                <a class="btn btn-default input-group-addon" role="button" ng-click="stable = 0;CalculateTraining();">0</a>
+                <a class="btn btn-default input-group-addon" role="button" ng-click="stable = stable -1;CalculateTraining();"><i class="fa fa-fw fa-minus"></i></a>
+                <input type="number" class="form-control text-center" ng-model="stable" placeholder="0" min="0" max="20" ng-change="CalculateTraining();"/>
+                <a class="btn btn-default input-group-addon" role="button" ng-click="stable = stable +1;CalculateTraining();"><i class="fa fa-fw fa-plus"></i></a>
+                <a class="btn btn-default input-group-addon" role="button" ng-click="stable = 20;CalculateTraining();">20</a>
+            </div>
+        </div>
+        <!-- Great Stable -->
+        <div class="form-group col-md-3 col-sm-12">
+            <label class="control-label col-sm-12">{{ 'TEXTS.HB.GREAT_STABLE' | translate }} {{ 'TEXTS.TR.LEVEL' | translate }}</label>
+            <div class="input-group">
+                <a class="btn btn-default input-group-addon" role="button" ng-click="gstable = 0;CalculateTraining();">0</a>
+                <a class="btn btn-default input-group-addon" role="button" ng-click="gstable = gstable -1;CalculateTraining();"><i class="fa fa-fw fa-minus"></i></a>
+                <input type="number" class="form-control text-center" ng-model="gstable" placeholder="0" min="0" max="20" ng-change="CalculateTraining();"/>
+                <a class="btn btn-default input-group-addon" role="button" ng-click="gstable = gstable +1;CalculateTraining();"><i class="fa fa-fw fa-plus"></i></a>
+                <a class="btn btn-default input-group-addon" role="button" ng-click="gstable = 20;CalculateTraining();">20</a>
+            </div>
+        </div>
+        <!-- Repartition -->
+        <div class="form-group col-md-6 col-sm-12">
+            <label class="control-label col-sm-12">{{ 'TEXTS.HB.CAVALRY' | translate }} {{ 'TEXTS.HB.REPARTITION' | translate }}</label>
+            <div class="input-group" ng-if="tribe !== 'TEUTON'">
+                <span class="input-group-addon">
+                    <i ng-if="tribe === 'ROMAN'" class="roman-unit-05-small" uib-tooltip="{{ 'TROOPS_NAME.ROMAN_05' | translate }}"></i>
+                    <i ng-if="tribe === 'GAUL'" class="gaul-unit-04-small" uib-tooltip="{{ 'TROOPS_NAME.GAUL_04' | translate }}"></i></span>
+                <span class="input-group-addon">{{100 - ratios.c}}</span>
+                <input type="range" class="form-control text-center" ng-model="ratios.c" placeholder="0" ng-change="CalculateTraining();"/>
+                <span class="input-group-addon">{{ratios.c}}</span>
+                <span class="input-group-addon">
+                    <i ng-if="tribe === 'ROMAN'" class="roman-unit-06-small" uib-tooltip="{{ 'TROOPS_NAME.ROMAN_06' | translate }}"></i>
+                    <i ng-if="tribe === 'GAUL'" class="gaul-unit-06-small" uib-tooltip="{{ 'TROOPS_NAME.GAUL_06' | translate }}"></i>
+                </span>
+            </div>
+            <div class="input-group" ng-if="tribe === 'TEUTON'"><span class="input-group-addon"><i class="teuton-unit-06-small" uib-tooltip="{{ 'TROOPS_NAME.TEUTON_06' | translate }}"></i></span></div>
+        </div>
+    </div>
+    <!-- Artillery & Horse Drinking Though -->
+    <div class="row">
+        <!-- Horse Drinking Tough level -->
+        <div class="form-group col-md-3 col-sm-12">
+            <label class="control-label col-sm-12">{{ 'TEXTS.HB.HDT' | translate }} {{ 'TEXTS.TR.LEVEL' | translate }}</label>
+            <div class="input-group col-sm-12" ng-if="tribe === 'ROMAN'">
+                <a class="btn btn-default input-group-addon" role="button" ng-click="ratios.h =0;CalculateTraining();">0</a>
+                <a class="btn btn-default input-group-addon" role="button" ng-click="ratios.h = ratios.h -1;CalculateTraining();"><i class="fa fa-fw fa-minus"></i></a>
+                <input type="number" class="form-control text-center" ng-model="ratios.h" placeholder="0" min="0" max="20" ng-change="CalculateTraining();"/>
+                <a class="btn btn-default input-group-addon" role="button" ng-click="ratios.h = ratios.h +1;CalculateTraining();"><i class="fa fa-fw fa-plus"></i></a>
+                <a class="btn btn-default input-group-addon" role="button" ng-click="ratios.h = 20;CalculateTraining();">20</a>
+            </div>
+            <div class="input-group col-sm-12" ng-if="tribe !== 'ROMAN'"><span class="input-group-addon">{{ 'TEXTS.HB.ROMANS_ONLY' | translate }}</span></div>
+        </div>
+        <!-- Workshop -->
+        <div class="form-group col-md-3 col-sm-12">
+            <label class="control-label col-sm-12">{{ 'TEXTS.HB.WORKSHOP' | translate }} {{ 'TEXTS.TR.LEVEL' | translate }}</label>
+            <div class="input-group col-sm-12">
+                <a class="btn btn-default input-group-addon" role="button" ng-click="workshop = 0;CalculateTraining();">0</a>
+                <a class="btn btn-default input-group-addon" role="button" ng-click="workshop = workshop -1;CalculateTraining();"><i class="fa fa-fw fa-minus"></i></a>
+                <input type="number" class="form-control text-center" ng-model="workshop" placeholder="0" min="0" max="20" ng-change="CalculateTraining();"/>
+                <a class="btn btn-default input-group-addon" role="button" ng-click="workshop = workshop +1;CalculateTraining();"><i class="fa fa-fw fa-plus"></i></a>
+                <a class="btn btn-default input-group-addon" role="button" ng-click="workshop = 20;CalculateTraining();">20</a>
+            </div>
+        </div>
+        <!-- Artillery Repartition -->
+        <div class="form-group col-md-6 col-sm-12">
+            <label class="control-label col-sm-12">{{ 'TEXTS.HB.ARTILLERY' | translate }} {{ 'TEXTS.HB.REPARTITION' | translate }}</label>
+            <div class="input-group col-sm-12">
+                <span class="input-group-addon"><i class="{{tribe | lowercase}}-unit-07-small" uib-tooltip-template="'tooltip.artillery.ram.html'"></i></span>
+                <span class="input-group-addon fa-fw">{{100 - artillery}}</span>
+                <input type="range" class="form-control text-center" ng-model="artillery" placeholder="0" ng-change="CalculateTraining();"/>
+                <span class="input-group-addon fa-fw">{{artillery}}</span>
+                <span class="input-group-addon"><i class="{{tribe | lowercase}}-unit-08-small" uib-tooltip-template="'tooltip.artillery.catapult.html'"></i></span>
+            </div>
+        </div>
+    </div>
+    <!-- Heros bonii & equipment -->
+    <div class="row">
+        <!-- Weapon -->
+        <div class="form-group col-md-6 col-sm-12">
+            <label class="control-label col-sm-4">{{ 'TEXTS.HB.WEAPON_SELECT' | translate }} : </label>
+            <div class="input-group col-sm-8">
+                <span class="input-group-addon">{{ 'TEXTS.HB.TIER' | translate }} :</span>
+                <a class="btn btn-default input-group-addon" ng-model="weapon.tier" ng-change="CalculateTraining();" uib-btn-radio="1">1</a>
+                <a class="btn btn-default input-group-addon" ng-model="weapon.tier" ng-change="CalculateTraining();" uib-btn-radio="2">2</a>
+                <a class="btn btn-default input-group-addon" ng-model="weapon.tier" ng-change="CalculateTraining();" uib-btn-radio="3">3</a>
+                <input type="text" ng-model="weapon.tribe" value="{{tribe}}" hidden="true"/>
+                <select class="form-control" ng-model="hero.weapon" ng-change="CalculateTraining();">
+                    <option ng-repeat="w in weaponsList | filter: weapon" value="{{w.unit}}_{{w.troopBonus}}">{{w.name}}</option>
+                    <option value="" default>{{ 'TEXTS.HB.NO_WEAPON' | translate }}</option>
+                </select>
+            </div>
+        </div>
+        <!-- Helmet -->
+        <div class="form-group col-md-3 col-sm-12">
+            <label class="control-label col-sm-9">{{ 'TEXTS.HB.HELMET_USE' | translate }}</label>
+            <div class="input-group col-sm-3">
+                <input type="checkbox" ng-model="hero.helmet.use" ng-change="CalculateTraining();"/>
+            </div>
+        </div>
+        <div class="form-group col-md-3 col-sm-12" ng-if="hero.helmet.use === true">
+            <div class="input-group col-sm-12">
+                <input type="number" min="0" max="100" step="5" class="form-control" ng-model="hero.helmet.percentage" value="0" ng-change="CalculateTraining();"/>
+                <span class="input-group-addon">% in : </span>
+                <select class="form-control" ng-model="hero.helmet.type" ng-change="CalculateTraining();">
+                    <option value="barracks">{{ 'TEXTS.HB.BARRACKS' | translate }}</option>
+                    <option value="stable">{{ 'TEXTS.HB.STABLE' | translate }}</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <!-- Results : ressources -->
+    <div class="row">
+        <div class="form-group col-sm-12">
+            <label class="control-label col-sm-2">{{ 'TEXTS.HB.RESSOURCES_NEEDED' | translate }} : </label>
+            <div class="input-group col-sm-10">
+                <p class="form-control-static col-sm-3"><i class="fa fa-fw ressources-wood" uib-tooltip="{{ 'TEXTS.RESSOURCES.WOOD' | translate }}"></i> {{ressources.wood | number}}</p>
+                <p class="form-control-static col-sm-3"><i class="fa fa-fw ressources-clay" uib-tooltip="{{ 'TEXTS.RESSOURCES.CLAY' | translate }}"></i> {{ressources.clay | number}}</p>
+                <p class="form-control-static col-sm-3"><i class="fa fa-fw ressources-iron" uib-tooltip="{{ 'TEXTS.RESSOURCES.IRON' | translate }}"></i> {{ressources.iron | number}}</p>
+                <p class="form-control-static col-sm-3"><i class="fa fa-fw ressources-all" uib-tooltip="{{ 'TEXTS.RESSOURCES.ALL' | translate }}"></i> {{ressources.total | number}}</p>
+            </div>
+        </div>
+    </div>
+    <!-- Results : Army statistics -->
+    <div class="row">
+        <div class="form-group col-sm-12">
+            <label class="control-label col-sm-2">{{ 'TEXTS.HB.ARMY_STATS' | translate }} : </label>
+            <div class="input-group col-sm-10">
+                <p class="form-control-static col-sm-2"><i class="fa fa-fw consumption" uib-tooltip="{{ 'TROOPS_INFO.SUPPLY' | translate }}" ></i> {{consumption | number}}</p>
+                <p class="form-control-static col-sm-2"><i class="fa fa-fw att-all" uib-tooltip="{{ 'TROOPS_INFO.BASE_STRENGTH' | translate }}"></i> {{strengths.attAll | number}}</p>
+                <p class="form-control-static col-sm-2"><i class="fa fa-fw fa-square" uib-tooltip="{{ 'TROOPS_INFO.ATT_I' | translate }}" ></i> {{strengths.attI | number}}</p>
+                <p class="form-control-static col-sm-2"><i class="fa fa-fw fa-square" uib-tooltip="{{ 'TROOPS_INFO.ATT_C' | translate }}" ></i> {{strengths.attC | number}}</p>
+                <p class="form-control-static col-sm-2"><i class="fa fa-fw def-i" uib-tooltip="{{ 'TROOPS_INFO.DEF_I' | translate }}" ></i> {{strengths.defI | number}}</p>
+                <p class="form-control-static col-sm-2"><i class="fa fa-fw def-c" uib-tooltip="{{ 'TROOPS_INFO.DEF_C' | translate }}" ></i> {{strengths.defC | number}}</p>
+            </div>
+        </div>
+    </div>
+    <!-- Results : Troop quantities -->
+    <div class="row">
+        <div class="col-sm-12 table-responsive">
+            <table class="table table-condensed table-bordered">
+                <tr class="text-center">
+                    <th>{{ 'TEXTS.HB.TROOPS' | translate }}</th>
+                    <td><i class="{{tribe | lowercase}}-unit-01-small"></i></td>
+                    <td><i class="{{tribe | lowercase}}-unit-02-small"></i></td>
+                    <td><i class="{{tribe | lowercase}}-unit-03-small"></i></td>
+                    <td><i class="{{tribe | lowercase}}-unit-04-small"></i></td>
+                    <td><i class="{{tribe | lowercase}}-unit-05-small"></i></td>
+                    <td><i class="{{tribe | lowercase}}-unit-06-small"></i></td>
+                    <td><i class="{{tribe | lowercase}}-unit-07-small"></i></td>
+                    <td><i class="{{tribe | lowercase}}-unit-08-small"></i></td>
+                    <td><i class="{{tribe | lowercase}}-unit-09-small"></i></td>
+                    <td><i class="{{tribe | lowercase}}-unit-10-small"></i></td>
+                    <td><i class="hero-small"></i></td>
+                </tr>
+                <tr class="text-center">
+                    <th>{{ 'TEXTS.TR.LEVEL' | translate }}</th>
+                    <td><em>20</em></td>
+                    <td><em>20</em></td>
+                    <td><em>20</em></td>
+                    <td><em>20</em></td>
+                    <td><em>20</em></td>
+                    <td><em>20</em></td>
+                    <td><em>20</em></td>
+                    <td><em>20</em></td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr class="text-center">
+                    <th>{{ 'TEXTS.TR.QTY' | translate }}</th>
+                    <td class="text-center">{{troops[0]}}</td>
+                    <td class="text-center">{{troops[1]}}</td>
+                    <td class="text-center">{{troops[2]}}</td>
+                    <td class="text-center">{{troops[3]}}</td>
+                    <td class="text-center">{{troops[4]}}</td>
+                    <td class="text-center">{{troops[5]}}</td>
+                    <td class="text-center">{{troops[6]}}</td>
+                    <td class="text-center">{{troops[7]}}</td>
+                    <td class="text-center">{{troops[8]}}</td>
+                    <td class="text-center">{{troops[9]}}</td>
+                    <td>1</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</form>
+<!-- Specific tooltip -->
+<script type="text/ng-template" id="tooltip.artillery.ram.html">
+    <span translate="{{ 'TROOPS_NAME.'+ tribe +'_07' }}"></span>
+</script>
+<script type="text/ng-template" id="tooltip.artillery.catapult.html">
+    <span translate="{{ 'TROOPS_NAME.'+ tribe +'_08' }}"></span>
+</script>
