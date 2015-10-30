@@ -1,4 +1,4 @@
-#TRAVIAN GPACK
+#Travian : Kingdoms Graphic Pack (tk-gpack)
 
 All the files in this folder are the sole property of Travian Games GMBH, and at their own will, it can be deleted.
 
