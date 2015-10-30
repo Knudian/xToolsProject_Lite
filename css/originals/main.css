@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/* ===== Custom CSS for the Github Page ===== */
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak,
+.ng-hide:not(.ng-hide-animate) {
+    display: none !important;
+}
+ng\:form { display: block;}
+/* ===== Tweaking the .navbar-fixed-top ===== */
+body {
+    padding-top: 55px;
+    padding-bottom : 55px;
+    min-height: 100vh;
+}
+/* ===== Tweaking angular.ui ===== */
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+/* ===== Customize the Brand ===== */
+.navbar-brand { font-family: 'dragon_is_comingregular';font-size:84px;}
+.navbar-fixed-second {margin-top:50px;}
+
+/* ===== LangBar Style ===== */
+.flag { width: 18px; height: 12px; box-shadow: 0 0 2px #777; margin-left:-10px;}
+
+/* ===== Modifying .page-header margin-top ===== */
+.page-header { margin-top: 20px; }
+
+/* ===== TS analyser ====== */
+.ts-valid {background-color: red;color:white;font-weight: bold;font-size: 0.9em;}
+.ts-invalid {background-color: white;color:gray;}
+#tsAnalyser div table {text-align: center;vertical-align: middle;}
+#tsAnalyser div table th {text-align: center;}

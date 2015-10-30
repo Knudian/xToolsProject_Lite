@@ -1,0 +1,872 @@
+.gaul-unit-10-big,
+.gaul-unit-01-big,
+.gaul-unit-02-big,
+.gaul-unit-03-big,
+.gaul-unit-04-big,
+.gaul-unit-05-big,
+.gaul-unit-06-big,
+.gaul-unit-07-big,
+.gaul-unit-08-big,
+.gaul-unit-09-big,
+.hero-big,
+.natar-unit-10-big,
+.natar-unit-01-big,
+.natar-unit-02-big,
+.natar-unit-03-big,
+.natar-unit-04-big,
+.natar-unit-05-big,
+.natar-unit-06-big,
+.natar-unit-07-big,
+.natar-unit-08-big,
+.natar-unit-09-big,
+.nature-unit-10-big,
+.nature-unit-01-big,
+.nature-unit-02-big,
+.nature-unit-03-big,
+.nature-unit-04-big,
+.nature-unit-05-big,
+.nature-unit-06-big,
+.nature-unit-07-big,
+.nature-unit-08-big,
+.nature-unit-09-big,
+.roman-unit-10-big,
+.roman-unit-01-big,
+.roman-unit-02-big,
+.roman-unit-03-big,
+.roman-unit-04-big,
+.roman-unit-05-big,
+.roman-unit-06-big,
+.roman-unit-07-big,
+.roman-unit-08-big,
+.roman-unit-09-big,
+.teuton-unit-10-big,
+.teuton-unit-01-big,
+.teuton-unit-02-big,
+.teuton-unit-03-big,
+.teuton-unit-04-big,
+.teuton-unit-05-big,
+.teuton-unit-06-big,
+.teuton-unit-07-big,
+.teuton-unit-08-big,
+.teuton-unit-09-big,
+.gaul-unit-10-small,
+.gaul-unit-01-small,
+.gaul-unit-02-small,
+.gaul-unit-03-small,
+.gaul-unit-04-small,
+.gaul-unit-05-small,
+.gaul-unit-06-small,
+.gaul-unit-07-small,
+.gaul-unit-079,
+.gaul-unit-08-small,
+.gaul-unit-09-small,
+.hero-small,
+.natar-unit-10-small,
+.natar-unit-01-small,
+.natar-unit-02-small,
+.natar-unit-03-small,
+.natar-unit-04-small,
+.natar-unit-05-small,
+.natar-unit-06-small,
+.natar-unit-07-small,
+.natar-unit-08-small,
+.natar-unit-09-small,
+.nature-unit-10-small,
+.nature-unit-01-small,
+.nature-unit-02-small,
+.nature-unit-03-small,
+.nature-unit-04-small,
+.nature-unit-05-small,
+.nature-unit-06-small,
+.nature-unit-07-small,
+.nature-unit-08-small,
+.nature-unit-09-small,
+.roman-unit-10-small,
+.roman-unit-01-small,
+.roman-unit-02-small,
+.roman-unit-03-small,
+.roman-unit-04-small,
+.roman-unit-05-small,
+.roman-unit-06-small,
+.roman-unit-07-small,
+.roman-unit-08-small,
+.roman-unit-09-small,
+.teuton-unit-10-small,
+.teuton-unit-01-small,
+.teuton-unit-02-small,
+.teuton-unit-03-small,
+.teuton-unit-04-small,
+.teuton-unit-05-small,
+.teuton-unit-06-small,
+.teuton-unit-07-small,
+.teuton-unit-08-small,
+.teuton-unit-09-small,
+.att-all,
+.def-c,
+.def-i {
+    display: inline-block;
+    background: url(../../img/travian/troops.png) no-repeat;
+    overflow: hidden;
+    text-indent: -9999px;
+    text-align: left;
+    margin-top: -1px;
+    margin-bottom: -1px;
+}
+
+.gaul-unit-10-big {
+    background-position: -0px -0px;
+    width: 32px;
+    height: 32px;
+}
+
+.gaul-unit-01-big {
+    background-position: -0px -32px;
+    width: 32px;
+    height: 32px;
+}
+
+.gaul-unit-02-big {
+    background-position: -0px -64px;
+    width: 32px;
+    height: 32px;
+}
+
+.gaul-unit-03-big {
+    background-position: -0px -96px;
+    width: 32px;
+    height: 32px;
+}
+
+.gaul-unit-04-big {
+    background-position: -0px -128px;
+    width: 32px;
+    height: 32px;
+}
+
+.gaul-unit-05-big {
+    background-position: -0px -160px;
+    width: 32px;
+    height: 32px;
+}
+
+.gaul-unit-06-big {
+    background-position: -0px -192px;
+    width: 32px;
+    height: 32px;
+}
+
+.gaul-unit-07-big {
+    background-position: -0px -224px;
+    width: 32px;
+    height: 32px;
+}
+
+.gaul-unit-08-big {
+    background-position: -0px -256px;
+    width: 32px;
+    height: 32px;
+}
+
+.gaul-unit-09-big {
+    background-position: -0px -288px;
+    width: 32px;
+    height: 32px;
+}
+
+.hero-big {
+    background-position: -0px -320px;
+    width: 32px;
+    height: 32px;
+}
+
+.natar-unit-10-big {
+    background-position: -0px -352px;
+    width: 32px;
+    height: 32px;
+}
+
+.natar-unit-01-big {
+    background-position: -0px -384px;
+    width: 32px;
+    height: 32px;
+}
+
+.natar-unit-02-big {
+    background-position: -0px -416px;
+    width: 32px;
+    height: 32px;
+}
+
+.natar-unit-03-big {
+    background-position: -0px -448px;
+    width: 32px;
+    height: 32px;
+}
+
+.natar-unit-04-big {
+    background-position: -0px -480px;
+    width: 32px;
+    height: 32px;
+}
+
+.natar-unit-05-big {
+    background-position: -0px -512px;
+    width: 32px;
+    height: 32px;
+}
+
+.natar-unit-06-big {
+    background-position: -0px -544px;
+    width: 32px;
+    height: 32px;
+}
+
+.natar-unit-07-big {
+    background-position: -0px -576px;
+    width: 32px;
+    height: 32px;
+}
+
+.natar-unit-08-big {
+    background-position: -0px -608px;
+    width: 32px;
+    height: 32px;
+}
+
+.natar-unit-09-big {
+    background-position: -0px -640px;
+    width: 32px;
+    height: 32px;
+}
+
+.nature-unit-10-big {
+    background-position: -0px -672px;
+    width: 32px;
+    height: 32px;
+}
+
+.nature-unit-01-big {
+    background-position: -0px -704px;
+    width: 32px;
+    height: 32px;
+}
+
+.nature-unit-02-big {
+    background-position: -0px -736px;
+    width: 32px;
+    height: 32px;
+}
+
+.nature-unit-03-big {
+    background-position: -0px -768px;
+    width: 32px;
+    height: 32px;
+}
+
+.nature-unit-04-big {
+    background-position: -0px -800px;
+    width: 32px;
+    height: 32px;
+}
+
+.nature-unit-05-big {
+    background-position: -0px -832px;
+    width: 32px;
+    height: 32px;
+}
+
+.nature-unit-06-big {
+    background-position: -0px -864px;
+    width: 32px;
+    height: 32px;
+}
+
+.nature-unit-07-big {
+    background-position: -0px -896px;
+    width: 32px;
+    height: 32px;
+}
+
+.nature-unit-08-big {
+    background-position: -0px -928px;
+    width: 32px;
+    height: 32px;
+}
+
+.nature-unit-09-big {
+    background-position: -0px -960px;
+    width: 32px;
+    height: 32px;
+}
+
+.roman-unit-10-big {
+    background-position: -0px -992px;
+    width: 32px;
+    height: 32px;
+}
+
+.roman-unit-01-big {
+    background-position: -0px -1024px;
+    width: 32px;
+    height: 32px;
+}
+
+.roman-unit-02-big {
+    background-position: -0px -1056px;
+    width: 32px;
+    height: 32px;
+}
+
+.roman-unit-03-big {
+    background-position: -0px -1088px;
+    width: 32px;
+    height: 32px;
+}
+
+.roman-unit-04-big {
+    background-position: -0px -1120px;
+    width: 32px;
+    height: 32px;
+}
+
+.roman-unit-05-big {
+    background-position: -0px -1152px;
+    width: 32px;
+    height: 32px;
+}
+
+.roman-unit-06-big {
+    background-position: -0px -1184px;
+    width: 32px;
+    height: 32px;
+}
+
+.roman-unit-07-big {
+    background-position: -0px -1216px;
+    width: 32px;
+    height: 32px;
+}
+
+.roman-unit-08-big {
+    background-position: -0px -1248px;
+    width: 32px;
+    height: 32px;
+}
+
+.roman-unit-09-big {
+    background-position: -0px -1280px;
+    width: 32px;
+    height: 32px;
+}
+
+.teuton-unit-10-big {
+    background-position: -0px -1312px;
+    width: 32px;
+    height: 32px;
+}
+
+.teuton-unit-01-big {
+    background-position: -0px -1344px;
+    width: 32px;
+    height: 32px;
+}
+
+.teuton-unit-02-big {
+    background-position: -0px -1376px;
+    width: 32px;
+    height: 32px;
+}
+
+.teuton-unit-03-big {
+    background-position: -0px -1408px;
+    width: 32px;
+    height: 32px;
+}
+
+.teuton-unit-04-big {
+    background-position: -0px -1440px;
+    width: 32px;
+    height: 32px;
+}
+
+.teuton-unit-05-big {
+    background-position: -0px -1472px;
+    width: 32px;
+    height: 32px;
+}
+
+.teuton-unit-06-big {
+    background-position: -0px -1504px;
+    width: 32px;
+    height: 32px;
+}
+
+.teuton-unit-07-big {
+    background-position: -0px -1536px;
+    width: 32px;
+    height: 32px;
+}
+
+.teuton-unit-08-big {
+    background-position: -0px -1568px;
+    width: 32px;
+    height: 32px;
+}
+
+.teuton-unit-09-big {
+    background-position: -0px -1600px;
+    width: 32px;
+    height: 32px;
+}
+
+.gaul-unit-10-small {
+    background-position: -0px -1632px;
+    width: 20px;
+    height: 20px;
+}
+
+.gaul-unit-01-small {
+    background-position: -0px -1652px;
+    width: 20px;
+    height: 20px;
+}
+
+.gaul-unit-02-small {
+    background-position: -0px -1672px;
+    width: 20px;
+    height: 20px;
+}
+
+.gaul-unit-03-small {
+    background-position: -0px -1692px;
+    width: 20px;
+    height: 20px;
+}
+
+.gaul-unit-04-small {
+    background-position: -0px -1712px;
+    width: 20px;
+    height: 20px;
+}
+
+.gaul-unit-05-small {
+    background-position: -0px -1732px;
+    width: 20px;
+    height: 20px;
+}
+
+.gaul-unit-06-small {
+    background-position: -0px -1752px;
+    width: 20px;
+    height: 20px;
+}
+
+.gaul-unit-07-small {
+    background-position: -0px -1772px;
+    width: 20px;
+    height: 20px;
+}
+
+.gaul-unit-79-small {
+    background-position: -0px -1792px;
+    width: 20px;
+    height: 20px;
+}
+
+.gaul-unit-08-small {
+    background-position: -0px -1812px;
+    width: 20px;
+    height: 20px;
+}
+
+.gaul-unit-09-small {
+    background-position: -0px -1832px;
+    width: 20px;
+    height: 20px;
+}
+
+.hero-small {
+    background-position: -0px -1852px;
+    width: 20px;
+    height: 20px;
+}
+
+.natar-unit-10-small {
+    background-position: -0px -1872px;
+    width: 20px;
+    height: 20px;
+}
+
+.natar-unit-01-small {
+    background-position: -0px -1892px;
+    width: 20px;
+    height: 20px;
+}
+
+.natar-unit-02-small {
+    background-position: -0px -1912px;
+    width: 20px;
+    height: 20px;
+}
+
+.natar-unit-03-small {
+    background-position: -0px -1932px;
+    width: 20px;
+    height: 20px;
+}
+
+.natar-unit-04-small {
+    background-position: -0px -1952px;
+    width: 20px;
+    height: 20px;
+}
+
+.natar-unit-05-small {
+    background-position: -0px -1972px;
+    width: 20px;
+    height: 20px;
+}
+
+.natar-unit-06-small {
+    background-position: -0px -1992px;
+    width: 20px;
+    height: 20px;
+}
+
+.natar-unit-07-small {
+    background-position: -0px -2012px;
+    width: 20px;
+    height: 20px;
+}
+
+.natar-unit-08-small {
+    background-position: -0px -2032px;
+    width: 20px;
+    height: 20px;
+}
+
+.natar-unit-09-small {
+    background-position: -0px -2052px;
+    width: 20px;
+    height: 20px;
+}
+
+.nature-unit-10-small {
+    background-position: -0px -2072px;
+    width: 20px;
+    height: 20px;
+}
+
+.nature-unit-01-small {
+    background-position: -0px -2092px;
+    width: 20px;
+    height: 20px;
+}
+
+.nature-unit-02-small {
+    background-position: -0px -2112px;
+    width: 20px;
+    height: 20px;
+}
+
+.nature-unit-03-small {
+    background-position: -0px -2132px;
+    width: 20px;
+    height: 20px;
+}
+
+.nature-unit-04-small {
+    background-position: -0px -2152px;
+    width: 20px;
+    height: 20px;
+}
+
+.nature-unit-05-small {
+    background-position: -0px -2172px;
+    width: 20px;
+    height: 20px;
+}
+
+.nature-unit-06-small {
+    background-position: -0px -2192px;
+    width: 20px;
+    height: 20px;
+}
+
+.nature-unit-07-small {
+    background-position: -0px -2212px;
+    width: 20px;
+    height: 20px;
+}
+
+.nature-unit-08-small {
+    background-position: -0px -2232px;
+    width: 20px;
+    height: 20px;
+}
+
+.nature-unit-09-small {
+    background-position: -0px -2252px;
+    width: 20px;
+    height: 20px;
+}
+
+.roman-unit-10-small {
+    background-position: -0px -2272px;
+    width: 20px;
+    height: 20px;
+}
+
+.roman-unit-01-small {
+    background-position: -0px -2292px;
+    width: 20px;
+    height: 20px;
+}
+
+.roman-unit-02-small {
+    background-position: -0px -2312px;
+    width: 20px;
+    height: 20px;
+}
+
+.roman-unit-03-small {
+    background-position: -0px -2332px;
+    width: 20px;
+    height: 20px;
+}
+
+.roman-unit-04-small {
+    background-position: -0px -2352px;
+    width: 20px;
+    height: 20px;
+}
+
+.roman-unit-05-small {
+    background-position: -0px -2372px;
+    width: 20px;
+    height: 20px;
+}
+
+.roman-unit-06-small {
+    background-position: -0px -2392px;
+    width: 20px;
+    height: 20px;
+}
+
+.roman-unit-07-small {
+    background-position: -0px -2412px;
+    width: 20px;
+    height: 20px;
+}
+
+.roman-unit-08-small {
+    background-position: -0px -2432px;
+    width: 20px;
+    height: 20px;
+}
+
+.roman-unit-09-small {
+    background-position: -0px -2452px;
+    width: 20px;
+    height: 20px;
+}
+
+.teuton-unit-10-small {
+    background-position: -0px -2472px;
+    width: 20px;
+    height: 20px;
+}
+
+.teuton-unit-01-small {
+    background-position: -0px -2492px;
+    width: 20px;
+    height: 20px;
+}
+
+.teuton-unit-02-small {
+    background-position: -0px -2512px;
+    width: 20px;
+    height: 20px;
+}
+
+.teuton-unit-03-small {
+    background-position: -0px -2532px;
+    width: 20px;
+    height: 20px;
+}
+
+.teuton-unit-04-small {
+    background-position: -0px -2552px;
+    width: 20px;
+    height: 20px;
+}
+
+.teuton-unit-05-small {
+    background-position: -0px -2572px;
+    width: 20px;
+    height: 20px;
+}
+
+.teuton-unit-06-small {
+    background-position: -0px -2592px;
+    width: 20px;
+    height: 20px;
+}
+
+.teuton-unit-07-small {
+    background-position: -0px -2612px;
+    width: 20px;
+    height: 20px;
+}
+
+.teuton-unit-08-small {
+    background-position: -0px -2632px;
+    width: 20px;
+    height: 20px;
+}
+
+.teuton-unit-09-small {
+    background-position: -0px -2652px;
+    width: 20px;
+    height: 20px;
+}
+
+.att-all {
+    background-position: -0px -2672px;
+    width: 16px;
+    height: 16px;
+}
+
+.def-c {
+    background-position: -16px -2672px;
+    width: 16px;
+    height: 16px;
+}
+
+.def-i {
+    background-position: -0px -2688px;
+    width: 16px;
+    height: 16px;
+}
+
+.tribe-roman-small,
+.tribe-roman-big,
+.tribe-gaul-small,
+.tribe-gaul-big,
+.tribe-teuton-small,
+.tribe-teuton-big,
+.tribe-nature-big,
+.icon-vp,
+.ressources-all,
+.ressources-wood,
+.ressources-clay,
+.ressources-iron {
+    display: inline-block;
+    background: url(../../img/travian/generals.png) no-repeat;
+    overflow: hidden;
+    text-indent: -9999px;
+    text-align: left;
+}
+
+.tribe-roman-big {
+    background-position: -0px -911px;
+    width: 59px;
+    height: 46px;
+    margin-left: -13px;
+    margin-bottom: -12px;
+    margin-top: -20px;
+}
+
+.tribe-roman-small {
+    background-position: -0px -615px;
+    width: 30px;
+    height: 30px;
+    margin-left: -5px;
+    margin-bottom: -8px;
+    margin-top: -7px;
+}
+
+.tribe-gaul-small {
+    background-position: -0px -645px;
+    width: 30px;
+    height: 30px;
+    margin-left: -5px;
+    margin-bottom: -8px;
+    margin-top: -7px;
+}
+
+.tribe-gaul-big {
+    background-position: -0px -1003px;
+    width: 59px;
+    height: 46px;
+    margin-left: -13px;
+    margin-bottom: -12px;
+    margin-top: -20px;
+}
+
+.tribe-teuton-small {
+    background-position: -0px -675px;
+    width: 30px;
+    height: 30px;
+    margin-left: -5px;
+    margin-bottom: -8px;
+    margin-top: -7px;
+}
+
+.tribe-teuton-big {
+    background-position: -0px -865px;
+    width: 59px;
+    height: 46px;
+    margin-left: -13px;
+    margin-bottom: -12px;
+    margin-top: -20px;
+}
+
+.tribe-nature-big {
+    background-position: -0px -957px;
+    width: 59px;
+    height: 46px;
+    margin-left: -13px;
+    margin-bottom: -12px;
+    margin-top: -20px;
+}
+
+.icon-vp {
+    background-position: -26px -22px;
+    width: 18px;
+    height: 19px;
+}
+
+.ressources-all {
+    background-position: -16px -41px;
+    width: 42px;
+    height: 16px;
+}
+
+.ressources-wood {
+    background-position: -10px -22px;
+    width: 16px;
+    height: 16px;
+}
+
+.ressources-clay {
+    background-position: -32px -217px;
+    width: 16px;
+    height: 16px;
+}
+
+.ressources-iron {
+    background-position: -16px -121px;
+    width: 16px;
+    height: 16px;
+}
+
+.consumption {
+    display: inline-block;
+    background-image: url(../../img/travian/consumption.png);
+    overflow: hidden;
+    text-indent: -9999px;
+    text-align: left;
+    width: 16px;
+    height: 16px;
+}
