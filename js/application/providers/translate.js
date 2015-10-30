@@ -2,8 +2,10 @@
 app.config(['$translateProvider', function ($translateProvider) {
     // $translateProvider.translations('fr', translations.FR);
     $translateProvider
-        .translations('en', translations.EN)
-        .translations('fr', translations.FR)
+        .useStaticFilesLoader({
+            prefix: 'langs/',
+            suffix: '.json'
+        })
         .preferredLanguage('en')
         .fallbackLanguage('en')
         .useSanitizeValueStrategy('escape');
