@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html ng-app="xToolsLite">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="author" href="humans.txt"/>
+        <title>xTools Project : Lite</title>
+        <link rel="shortcut icon" href="favicon.ico"/>
+        <!-- Travian : Kingdoms CSS 
+            Must be set as  the first one, or it'll override the other styles.
+        -->
+        <link rel="stylesheet" href="img/travian/layout/css/customized.css"/>
+        <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css"/>
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"/>-->
+        <!-- Font Styles -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+        <link rel="stylesheet" href="css/fonts/dragon-is-coming.css"/>
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="css/others/phoca-flags.css"/>
+        <link rel="stylesheet" href="css/travian/icons.css"/>
+        <link rel="stylesheet" href="css/originals/main.css"/>
+
+        <!--[if IE]>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <!-- Head Menu -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="fa fa-fw fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="#/home">Xtools Project Lite</a>
+                </div>
+                <div class="collapse navbar-collapse" ng-controller="ChangeLanguage_CTRL" ng-init="language = 'en';">
+                    <ul class="nav navbar-nav">
+                        <!--<li><a href="#/home"><i class="fa fa-fw fa-home"></i><span translate="TOPMENU.HOME"></span></a></li>-->
+                        <li uib-dropdown>
+                            <a href id="tool_list" uib-dropdown-toggle><i class="fa fa-fw fa-cog"></i> <span translate="TOPMENU.TOOLS"></span> <i class="fa fa-fw fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="tool_list">
+                                <li><a href="#/hammerbuilder"><i class="fa fa-fw fa-square-o"></i> Hammer Builder</a></li>
+                                <li><a href="#/tsa"><i class="fa fa-fw fa-square-o"></i> Tournament Square estimator</a></li>
+                            </ul>
+                        </li>
+                        <li uib-dropdown>
+                            <a href id="tool_list" uib-dropdown-toggle><i class="fa fa-fw fa-cog"></i> <span translate="TOPMENU.HELPERS"></span> <i class="fa fa-fw fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="tool_list">
+                                <!-- <li><a href="#/parser"><i class="fa fa-fw fa-square-o"></i> Parser</a></li> -->
+                                <li><a href="#/comparator"><i class="fa fa-fw fa-square-o"></i> Troop Research</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#/about"><i class="fa fa-fw fa-info"></i><span translate="TOPMENU.ABOUT"></span></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li uib-dropdown>
+                            <a href id="lang_menu" uib-dropdown-toggle><i class="fa fa-fw flag flag-{{language}}"></i> <i class="fa fa-fw fa-angle-down"></i></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="lang_menu">
+                                <li><a href title="France" ng-click="changeLanguage('fr')"><i class="fa fa-fw flag flag-fr"></i> Fran&ccedil;ais</a></li>
+                                <li><a href title="United Kingdom" ng-click="changeLanguage('en')"><i class="fa fa-fw flag flag-gb"></i> English</a></li>
+                                <!--
+                                <li><a href title="Türkiye"><i class="fa fa-fw flag flag-tr"></i> Türkiye</a></li>
+                                <li><a href title="Danmark"><i class="fa fa-fw flag flag-dk"></i> Danmark</a></li>
+                                <li><a href title="Nederland"><i class="fa fa-fw flag flag-nl"></i> Nederland</a></li>
+                                <li><a href title="Deutschland"><i class="fa fa-fw flag flag-de"></i> Deutschland</a></li>
+                                <li><a href title="Italia"><i class="fa fa-fw flag flag-it"></i> Italia</a></li>
+                                <li><a href title="Magyarország"><i class="fa fa-fw flag flag-hu"></i> Magyarország</a></li>
+                                <li><a href title="United Kingdom" ng-click="changeLanguage('en')"><i class="fa fa-fw flag flag-gb"></i> English</a></li>
+                                <li><a href title="Россия"><i class="fa fa-fw flag flag-ru"></i> Россия</a></li>
+                                <li><a href title="Česká republika"><i class="fa fa-fw flag flag-cz"></i> Česká republika</a></li>
+                                <li><a href title="Polska"><i class="fa fa-fw flag flag-pl"></i> Polska</a></li>
+                                <li><a href title="United States"><i class="fa fa-fw flag flag-us"></i> American</a></li>
+                                -->
+                            </ul>
+                        </li>
+                        <li><a href><i class="fa fa-fw fa-github"></i> Fork me on Github</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container" ng-view></div>
+        <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+            <div class="container">
+                <p class="navbar-text text-center">&copy; 2015 - Knudian | Images : &copy; Travian Games gmbh, all rights reserved | Published under the MIT Licence | Found a bug, or having a question? Create an Issue on GitHub.</p>
+            </div>
+        </nav>
+        <script src="js/jquery/2.1.4/jquery.min.js"></script>
+        <script src="js/angular/1.4.7/angular.min.js"></script>
+        <script src="js/angular/1.4.7/angular-route.min.js"></script>
+        <script src="js/angular/1.4.7/angular-cookies.min.js"></script>
+        <script src="js/angular/1.4.7/angular-sanitize.min.js"></script>
+        <script src="js/angular/translate/2.8.1/angular-translate.min.js"></script>
+        <script src="js/angular/translate/2.8.1/angular-translate-loader-url.min.js"></script>
+        <script src="js/angular/angular.ui.tpls.min.js"></script>
+        <script src="js/angular/angular-duration-format.js"></script>
+        <!-- Travian game datas --><script src="js/travian/gamedatas.js"></script>
+        <!-- Translations datas --><script src="js/application/translations.js"></script>
+        <!-- Application Start  --><script src="js/application/core.js"></script>
+        <!-- Provider : Routes  --><script src="js/application/providers/routes.js"></script>
+        <!-- Provider : Langs   --><script src="js/application/providers/translate.js"></script>
+        <!-- Controller : Lang  --><script src="js/application/controllers/language.js"></script>
+        <!-- Controller : HB    --><script src="js/application/controllers/tools/hammer_builder.js"></script>
+        <!-- Controller : TSA   --><script src="js/application/controllers/tools/tsa.js"></script>
+        <!-- Controller : TR    --><script src="js/application/controllers/helpers/troop_research.js"></script>
+    </body>
+</html>
