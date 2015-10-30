@@ -1,7 +1,10 @@
 var translations = {};
 
 /*
-	the object translations.EN is the object for the english texts. Changing EN to FR is 
+	the object translations.EN is the object for the english texts.
+    Each subobjects "EN", "FR" is the name of a language.
+    
+    Further updates will be done by using JSON files in the $translate provider.
 */
 
 translations.EN = {
@@ -291,6 +294,22 @@ translations.FR = {
 	TEXTS : {
 		YES : "Oui",
 		NO : "Non",
+		TSA : {
+			PANEL : {
+				TIMES : "Temps",
+				ATTACKER : "Informations sur l'attaquant",
+				DEFENDER : "Informations sur le défenseur"
+			},
+			EXAMPLE : "Exemple",
+			HOI : "Heure d'impact",
+			HFV : "Heure de découverte",
+			LSH : "Dernière heure sans attaque",
+			ATTACKER : "Attaquant",
+			DEFENDER : "Défenseur",
+			BOOTS : "Bonus de vitesse des bottes, en %",
+			ATTACK_TYPE : "Type d'attaque",
+			FORMAT : 'Le format des heures doit respecter scrupuleusement le format indiqué, sinon l\'outil ne fonctionnera pas correctement.'
+		},
 		TR : {
 			MINIMAL_AMOUNT : "Quantité minimale",
 			LEVEL : "Niveau",
