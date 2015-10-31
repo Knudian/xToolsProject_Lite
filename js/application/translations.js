@@ -7,7 +7,7 @@ var translations = {};
     Further updates will be done by using JSON files in the $translate provider.
 */
 
-var translationsFlags = ["gb","fr"];
+var translationsFlags = ["gb","fr","de"];
 
 translations.EN = {
 	TOPMENU : {
@@ -100,14 +100,14 @@ translations.EN = {
         HOME: {
             WELCOME : "Welcome on the",
             T_01 : "This project is made of tools for the",
-            T_02 : "The Genesis of the the project was done by some french players, in order to have a more complete tool to help the players, and not to have many external tools scattered all over the web.",
+            T_02 : "The Genesis of the project was done by some french players, in order to have a more complete tool to help the players, and not to have many external tools scattered all over the web.",
             T_03 : "This Lite version of the project include only the stand-alone tools. Those tools are the most used ones, and publishing those here, on GitHub, will make it easier for all developpers to improve an existing project.",
             T_04 : "We hope you will enjoy all those tools, and help improve them.",
             AVAIL_LANG : "Available languages",
             TOOL_LIST : "Tools list"
         },
 		TSA : {
-            DESC: "Tool for estimating the Tournament Square (TS) of an ennemy.",
+            DESC: "Tool for estimating the Tournament Square (TS) of an enemy.",
 			PANEL : {
 				TIMES : "Times",
 				ATTACKER : "Attacker intelligence",
@@ -428,5 +428,216 @@ translations.FR = {
 		Building_44 : "Salon de thé",
 		Building_45 : "Chambre du trésor cachée",
 		Building_99 : "Aléatoire"
+	}
+};
+
+translations.DE = {
+	TOPMENU : {
+		HOME : "Home page",
+		TOOLS : "Tools",
+		HELPERS : "Helpers",
+		ABOUT : "About"
+	},
+	TRIBE : {
+		ROMANS : "Römer",
+		TEUTONS : "Germanen",
+		GAULS : "Gallier",
+		NATURE : "Natur",
+		NATARS : "Nataren",
+		TITLE : "Volk"
+	},
+	SENDING_MODE : {
+		REINFORCEMENT : "Unterstützung",
+		NORMAL : "Angriff",
+		RAID : "Raubzug",
+		SPY : "Spionage",
+		SIEGE : "Belagerung",
+		SETTLING : "Siedeln"
+	},
+	TROOPS_NAME : {
+		ROMAN_01  : "Legionär",
+		ROMAN_02  : "Prätorianer",
+		ROMAN_03  : "Imperianer",
+		ROMAN_04  : "Equites Legati",
+		ROMAN_05  : "Equites Imperatoris",
+		ROMAN_06  : "Equites Caesaris",
+		ROMAN_07  : "Rammbock",
+		ROMAN_08  : "Feuerkatapult",
+		ROMAN_09  : "Senator",
+		ROMAN_10  : "Siedler",
+		TEUTON_01 : "Keulenschwinger",
+		TEUTON_02 : "Speerkämpfer",
+		TEUTON_03 : "Axtkämpfer",
+		TEUTON_04 : "Kundschafter",
+		TEUTON_05 : "Paladin",
+		TEUTON_06 : "Teutonen Reiter",
+		TEUTON_07 : "Ramme",
+		TEUTON_08 : "Katapult",
+		TEUTON_09 : "Stammesführer",
+		TEUTON_10 : "Siedler",
+		GAUL_01   : "Phalanx",
+		GAUL_02   : "Schwertkämpfer",
+		GAUL_03   : "Späher",
+		GAUL_04   : "Druidenreiter",
+		GAUL_05   : "Theutates Blitz",
+		GAUL_06   : "Haeduaner",
+		GAUL_07   : "Rammholz",
+		GAUL_08   : "Kriegskatapult",
+		GAUL_09   : "Häuptling",
+		GAUL_10   : "Siedler",
+		NATURE_01 : "Ratte",
+		NATURE_02 : "Spinne",
+		NATURE_03 : "Schlange",
+		NATURE_04 : "Fledermaus",
+		NATURE_05 : "Wildschwein",
+		NATURE_06 : "Wolf",
+		NATURE_07 : "Bär",
+		NATURE_08 : "Krokodil",
+		NATURE_09 : "Tiger",
+		NATURE_10 : "Elefant",
+		NATAR_01  : "Lanzenträger",
+		NATAR_02  : "Dornenkrieger",
+		NATAR_03  : "Natarengardist",
+		NATAR_04  : "Späher",
+		NATAR_05  : "Axtreiter",
+		NATAR_06  : "Natarenritter",
+		NATAR_07  : "Kriegselefant",
+		NATAR_08  : "Balliste",
+		NATAR_09  : "Natarenfürst",
+		NATAR_10  : "Nataren X"
+	},
+	TROOPS_INFO : {
+		BASE_STRENGTH : "Angriff",
+		DEF_I : "Verteidigung gegen Infantrie",
+		DEF_C : "Verteidigung gegen Reiterei",
+		ATT_I : "Angriff Infantrie",
+		ATT_C : "Angriff Reiterei",
+		CARRY : "Tragekapazität",
+		SPEED : "Geschwindigkeit",
+		SUPPLY : "Getreideverbrauch"
+	},
+	TEXTS : {
+		YES : "Ja",
+		NO : "Nein",
+        HOME: {
+            WELCOME : "Willkommen auf der Seite",
+            T_01 : "Dieses Projekt besteht aus Tools für",
+            T_02 : "Es wurde von einigen französischen Spielern entwickelt, um idealerweise ein komplettes Tool zur Unterstützung der Spieler zu haben, statt vieler externer Tools, die an verschiedenen Stellen im Web gespeichert sind.",
+            T_03 : "Diese Light-Version beinhaltet nur die eigenständig funktionierenden Tools. Dies sind die am häufigsten benutzten Tools, und ihre Veröffentlichung hier, auf Github, wird es für alle Entwickler leichter machen, ein bestehendes Projekt zu verbessern.",
+            T_04 : "Wir hoffen, dass Euch diese Tools gefallen, und freuen uns, wenn Ihr mithelft, sie zu verbessern.",
+            AVAIL_LANG : "Sprachen",
+            TOOL_LIST : "Tools"
+        },
+		TSA : {
+            DESC: "Turnierplatz-Analyse (TPA).",
+			PANEL : {
+				TIMES : "Zeiten",
+				ATTACKER : "Angreifer - Nachrichtendienst",
+				DEFENDER : "Verteidiger - Daten"
+			},
+			EXAMPLE : "Beispiel",
+			HOI : "Angriffszeitpunkt",
+			HFV : "Wann wurde der Angriff gesehen?",
+			LSH : "Wann warst Du zuletzt im Account, ohne den Angriff zu sehen?",
+			ATTACKER : "Angreifer",
+			DEFENDER : "Verteidiger",
+			BOOTS : "Bonus der Helden-Schuhe in %",
+			ATTACK_TYPE : "Art des Angriffs",
+			FORMAT : 'Wichtig: das Format von Datum und Uhrzeit muss wie im Beispiel benutzt werden, sonst buggt das Tool!'
+		},
+		TR : {
+            DESC: "Dieses Tool definiert, wieviele Truppen Du mindestens haben solltest, damit es sich lohnt, Ressourcen in deren Verbesserung zu investieren.",
+			MINIMAL_AMOUNT : "Mindestmenge",
+			LEVEL : "Stufe",
+			LVL : "Lvl",
+			QTY : "Menge",
+			NPC : "Mit Umgolden?"
+		},
+		HB : {
+            DESC : "Off-Rechner",
+			TRIBE_SELECT : "Volk",
+			DURATION_SET : "Dauer",
+			BARRACKS : "Kaserne",
+			GREAT_BARRACKS : "Große Kaserne",
+			STABLE : "Stall",
+			GREAT_STABLE : "Großer Stall",
+			HDT : "Pferdetränke",
+			WORKSHOP : "Werkstatt",
+			INFANTRY : "Infantrie",
+			CAVALRY : "Reiterei",
+			REPARTITION : "(Aufteilung in %)",
+			ARTILLERY : "Artillerie",
+			TROOPS : "Truppen",
+			WEAPON_SELECT : "Waffe",
+			NO_WEAPON : "Keine Waffe",
+			TIER : "Ausführung",
+			ROMANS_ONLY : "Nur für Römer",
+			HELMET_USE : "Mit Helm?",
+			RESSOURCES_NEEDED : "Benötigte Ressourcen",
+			ARMY_STATS : "Statistiken"
+		},
+		DURATIONS : {
+			SECOND : "Sekunde",
+			MINUTE : "Minute",
+			HOUR : "Stunde",
+			DAY : "Tag",
+			WEEK : "Woche",
+			MONTH : "Monat",
+			YEAR : "Jahr"
+		},
+		RESSOURCES : {
+			ALL : "Alle",
+			CLAY : "Lehm",
+			CROP : "Getreide",
+			IRON : "Eisen",
+			WOOD : "Holz"
+		}
+	},
+	BUILDING : {
+		Building_0 : "Bauplatz",
+		Building_1 : "Holzfäller",
+		Building_2 : "Lehmgrube",
+		Building_3 : "Eisenmine",
+		Building_4 : "Getreidefarm",
+		Building_5 : "Sägewerk",
+		Building_6 : "Lehmbrennerei",
+		Building_7 : "Eisengießerei",
+		Building_8 : "Getreidemühle",
+		Building_9 : "Bäckerei",
+		Building_10 : "Rohstofflager",
+		Building_11 : "Kornspeicher",
+		Building_13 : "Schmiede",
+		Building_14 : "Turnierplatz",
+		Building_15 : "Hauptgebäude",
+		Building_16 : "Versammlungsplatz",
+		Building_17 : "Marktplatz",
+		Building_18 : "Botschaft",
+		Building_19 : "Kaserne",
+		Building_20 : "Stall",
+		Building_21 : "Werkstatt",
+		Building_22 : "Akademie",
+		Building_23 : "Versteck",
+		Building_24 : "Rathaus",
+		Building_25 : "Residenz",
+		Building_26 : "Palast",
+		Building_27 : "Schatzkammer",
+		Building_28 : "Handelskontor",
+		Building_29 : "Große Kaserne",
+		Building_30 : "Großer Stall",
+		Building_31 : "Römische Mauer",
+		Building_32 : "Germanischer Erdwall",
+		Building_33 : "Gallische Palisade",
+		Building_34 : "Steinmetz",
+		Building_35 : "Brauerei",
+		Building_36 : "Fallensteller",
+		Building_38 : "Großes Rohstofflager",
+		Building_39 : "Großer Kornspeicher",
+		Building_40 : "Weltwunder",
+		Building_41 : "Pferdetränke",
+		Building_42 : "Wassergraben",
+		Building_43 : "Mauer der Nataren",
+		Building_44 : "Teehaus",
+		Building_45 : "Verborgene Schatzkammer",
+		Building_99 : "Zufallsprinzip"
 	}
 };
