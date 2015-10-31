@@ -35,3 +35,6 @@ body {
 .ts-invalid {background-color: white;color:gray;}
 #tsAnalyser div table {text-align: center;vertical-align: middle;}
 #tsAnalyser div table th {text-align: center;}
+
+/* ===== Control-label fix ====== */
+.control-label {margin-top:7px;}

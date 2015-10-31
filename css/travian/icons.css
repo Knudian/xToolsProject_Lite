@@ -870,3 +870,65 @@
     width: 16px;
     height: 16px;
 }
+/* ===== Troop Movements ===== */
+.sendTroops_attack_large_illu,
+.sendTroops_raid_large_illu,
+.sendTroops_settle_large_illu,
+.sendTroops_siege_large_illu,
+.sendTroops_spy_large_illu,
+.sendTroops_support_large_illu {
+    display: inline-block;
+    background: url(../../img/travian/layout/images/sprites/movement-s085a93dcf0.png) no-repeat;
+    overflow: hidden;
+    text-indent: -9999px;
+    text-align: left;
+    margin-top: -1px;
+    margin-bottom: -1px;
+    height: 76px;
+    width: 59px;
+}
+
+.sendTroops_raid_large_illu {
+    background-position: -346px 0;
+}
+
+.sendTroops_settle_large_illu {
+    background-position: -405px 0;
+}
+
+.sendTroops_siege_large_illu {
+    background-position: -110px 0;
+}
+
+.sendTroops_spy_large_illu {
+    background-position: -169px 0;
+}
+
+.sendTroops_support_large_illu {
+    background-position: -464px 0;
+}
+.sendTroops_attack_large_illu {
+    background-position: -228px 0;
+}
+.sendTroops_attack_small_illu,
+.sendTroops_raid_small_illu,
+.sendTroops_settle_small_illu,
+.sendTroops_siege_small_illu,
+.sendTroops_spy_small_illu,
+.sendTroops_support_small_illu {
+    display: inline-block;
+    background: url(../../img/travian/layout/images/sprites/movement-s085a93dcf0.png) no-repeat;
+    overflow: hidden;
+    text-indent: -9999px;
+    text-align: left;
+    margin-top: -1px;
+    margin-bottom: -1px;
+    height: 76px;
+    width: 59px;
+}
+.sendTroops_raid_small_illu     { background-position: -346px 0;}
+.sendTroops_settle_small_illu   { background-position: -405px 0;}
+.sendTroops_siege_small_illu    { background-position: -110px 0;}
+.sendTroops_spy_small_illu      { background-position: -169px 0;}
+.sendTroops_support_small_illu  { background-position: -464px 0;}
+.sendTroops_attack_small_illu   { background-position: -228px 0;}

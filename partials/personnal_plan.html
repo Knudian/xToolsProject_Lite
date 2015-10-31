@@ -1,0 +1,112 @@
+<div class="row" ng-init="player = {'tribe':'ROMAN','x':'100','y':'100','type':'normal'}; status.first.open = true;target = {'type':'REINFORCEMENT','landing':0,'x':0, 'y':0}">
+    <h4 class="page-header">Personnal Plan</h4>
+</div>
+<div class="row">
+    <uib-accordion close-others="true">
+        <uib-accordion-group is-open="status.first.open" panel-class="panel-primary">
+            <uib-accordion-heading>
+               <i class="fa fa-fw" ng-class="{'fa-chevron-down': status.first.open, 'fa-chevron-right': !status.first.open}"></i> Player Informations 
+            </uib-accordion-heading>
+            <form class="form">
+                <div class="form-group">
+                    <label class="col-xs-3 control-label">{{ 'TEXTS.HB.TRIBE_SELECT' | translate }} : </label>
+                    <div class="input-group col-xs-8">
+                        <div class="btn-group">
+                            <label class="btn btn-default" ng-model="player.tribe" ng-change="CalculateTraining();" uib-btn-radio="'ROMAN'"><i class="tribe-roman-small"></i> {{ 'TRIBE.ROMANS' | translate }}</label>
+                            <label class="btn btn-default" ng-model="player.tribe" ng-change="CalculateTraining();" uib-btn-radio="'TEUTON'"><i class="tribe-teuton-small"></i> {{ 'TRIBE.TEUTONS' | translate }}</label>
+                            <label class="btn btn-default" ng-model="player.tribe" ng-change="CalculateTraining();" uib-btn-radio="'GAUL'"><i class="tribe-gaul-small"></i> {{ 'TRIBE.GAULS' | translate }}</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-3 control-label">Village informations :</label>
+                    <div class="input-group col-xs-4">
+                        <span class="input-group-addon">Coordinates :</span>
+                        <input type="text" class="form-control" ng-model="player.x" placeholder="X"/>
+                        <span class="input-group-addon">|</span>
+                        <input type="text" class="form-control"  ng-model="player.y" placeholder="Y"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group col-xs-4 col-xs-offset-3">
+                        <span class="input-group-addon"><img src="img/travian/layout/images/source/ui/icons/buildings/g14Icon6bea.gif" uib-tooltip="{{ 'BUILDING.Building_14' | translate }}"/> TS level </span>
+                        <input type="text" class="form-control"  ng-model="player.ts" placeholder="0"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-xs-3 control-label">Army's speed :</label>
+                    <div class="input-group col-xs-9 btn-group">
+                        <label class="btn btn-default" ng-model="nr" uib-btn-radio="1"><i class="{{ player.tribe | lowercase }}-unit-01-small"></i></label>
+                        <label class="btn btn-default" ng-model="nr" uib-btn-radio="2"><i class="{{ player.tribe | lowercase }}-unit-02-small"></i></label>
+                        <label class="btn btn-default" ng-model="nr" uib-btn-radio="3"><i class="{{ player.tribe | lowercase }}-unit-03-small"></i></label>
+                        <label class="btn btn-default" ng-model="nr" uib-btn-radio="4"><i class="{{ player.tribe | lowercase }}-unit-04-small"></i></label>
+                        <label class="btn btn-default" ng-model="nr" uib-btn-radio="5"><i class="{{ player.tribe | lowercase }}-unit-05-small"></i></label>
+                        <label class="btn btn-default" ng-model="nr" uib-btn-radio="6"><i class="{{ player.tribe | lowercase }}-unit-06-small"></i></label>
+                        <label class="btn btn-default" ng-model="nr" uib-btn-radio="7"><i class="{{ player.tribe | lowercase }}-unit-07-small"></i></label>
+                        <label class="btn btn-default" ng-model="nr" uib-btn-radio="8"><i class="{{ player.tribe | lowercase }}-unit-08-small"></i></label>
+                        <label class="btn btn-default" ng-model="nr" uib-btn-radio="9"><i class="{{ player.tribe | lowercase }}-unit-09-small"></i></label>
+                        <label class="btn btn-default" ng-model="nr" uib-btn-radio="10"><i class="{{ player.tribe | lowercase }}-unit-10-small"></i></label>
+                    </div>
+                </div>
+            </form>
+        </uib-accordion-group>
+        <uib-accordion-group panel-class="panel-info">
+            <uib-accordion-heading>
+                <i class="fa fa-fw" ng-class="{'fa-chevron-down': status.second.open, 'fa-chevron-right': !status.second.open}"></i> Targets informations
+            </uib-accordion-heading>
+            <div class="row">
+                <div class="col-xs-4">
+                    <form class="form">
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">Target : </label>
+                            <div class="input-group col-xs-9">
+                                <span class="input-group-addon">X</span>
+                                <input type="text" class="form-control" ng-model="target.x" placeholder="X"/>
+                                <span class="input-group-addon">Y</span>
+                                <input type="text" class="form-control" ng-model="target.y" placeholder="Y"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-3">Type : </label>
+                            <div class="input-group btn-group col-xs-9">
+                                <label class="btn btn-default" ng-model="target.type" uib-btn-radio="'REINFORCEMENT'"><i class="sendTroops_support_small_illu"></i></label>
+                                <label class="btn btn-default" ng-model="target.type" uib-btn-radio="'NORMAL'"><i class="sendTroops_attack_small_illu"></i></label>
+                                <label class="btn btn-default" ng-model="target.type" uib-btn-radio="'SIEGE'"><i class="sendTroops_siege_small_illu"></i></label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-xs-3 control-label">{{ 'TEXTS.TSA.HOI' | translate }}</label>
+                            <div class="input-group col-xs-9">
+                                <input type="text" class="form-control text-center"
+                                       ng-model="target.landing"
+                                       placeholder="dd:mm:yyyy:hh:mm:ss"
+                                       popover-placement="bottom"
+                                       popover-trigger="focus"
+                                       uib-popover="{{ 'TEXTS.TSA.FORMAT' | translate }}<br/>"
+                                       popover-title="{{ 'TEXTS.TSA.HOI' | translate }}"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group col-xs-9 col-xs-offset-3">
+                                <span class="input-group-addon text-center">{{ 'TEXTS.TSA.EXAMPLE' | translate }} : <code>29:05:2015:03:15:53</code>.</span>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-default btn-block">Add a movement<i class="fa fa-fw fa-plus"></i></button>
+                    </form>
+                </div>
+                <div class="col-xs-8 table-responsive">
+                    <strong>Target list</strong>
+                    <table class="table table-condensed">
+                        <tr>
+                            <th class="col-xs-1 text-center" colspan="2">( X|Y )</th>
+                            <th class="col-xs-3 text-center">Type</th>
+                            <th class="col-xs-4 text-center">Landing time</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </uib-accordion-group>
+    </uib-accordion>
+    <pre>Player datas : {{ player }}</pre>
+    <pre>Attack : {{ target }}</pre>
+</div>
