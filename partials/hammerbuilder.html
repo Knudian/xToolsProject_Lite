@@ -97,7 +97,7 @@
             <div class="input-group" ng-if="tribe !== 'TEUTON'">
                 <span class="input-group-addon">
                     <i ng-if="tribe === 'ROMAN'" class="roman-unit-05-small" uib-tooltip="{{ 'TROOPS_NAME.ROMAN_05' | translate }}"></i>
-                    <i ng-if="tribe === 'GAUL'" class="gaul-unit-04-small" uib-tooltip="{{ 'TROOPS_NAME.GAUL_04' | translate }}"></i></span>
+                    <i ng-if="tribe === 'GAUL'" class="gaul-unit-05-small" uib-tooltip="{{ 'TROOPS_NAME.GAUL_05' | translate }}"></i></span>
                 <span class="input-group-addon">{{100 - ratios.c}}</span>
                 <input type="range" class="form-control text-center" ng-model="ratios.c" placeholder="0" ng-change="CalculateTraining();"/>
                 <span class="input-group-addon">{{ratios.c}}</span>
