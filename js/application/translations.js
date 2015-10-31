@@ -519,7 +519,7 @@ translations.DE = {
 	TEXTS : {
 		YES : "Ja",
 		NO : "Nein",
-        HOME: {
+        	HOME: {
             WELCOME : "Willkommen auf der Seite",
             T_01 : "Dieses Projekt besteht aus Tools für",
             T_02 : "Es wurde von einigen französischen Spielern entwickelt, um idealerweise ein komplettes Tool zur Unterstützung der Spieler zu haben, statt vieler externer Tools, die an verschiedenen Stellen im Web gespeichert sind.",
@@ -529,7 +529,7 @@ translations.DE = {
             TOOL_LIST : "Tools"
         },
 		TSA : {
-            DESC: "Turnierplatz-Analyse (TPA).",
+        		DESC: "Turnierplatz-Analyse (TPA) - (TS in Englisch).",
 			PANEL : {
 				TIMES : "Zeiten",
 				ATTACKER : "Angreifer - Nachrichtendienst",
