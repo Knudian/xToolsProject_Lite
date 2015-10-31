@@ -1,12 +1,42 @@
-<h4 class="page-header">Welcome on the xTools Project <sup class="label label-info">LITE</sup></h4>
-<p class="text-justified">This project is made of tools for the <abbr title="Massive Multiplayer Online Real-Time Strategy">MMORTS</abbr> game <a href="http://kingdoms.travian.com" target="_blank">Travian : Kingdoms <i class="fa fa-fw fa-external-link"></i></a>.</p>
-<p class="text-justifed">The Genesis of the the project was done by some french players, in order to have a more complete tool to help the players, and not to have many external tools scattered all over the web.</p>
-<p class="text-justified">This Lite version of the project include only the stand-alone tools. Those tools are the most used ones, and publishing those here, on GitHub, will make it easier for all developpers to improve an existing project.</p>
-<p class="text-justified">I hope you will enjoy all those tools, and help improve them.</p>
-<hr/>
-<h5 class="page-header">Tool list :</h5>
-<dl class="dl-horizontal">
-    <dt>Hammer Builder : </dt><dl>Tool for estimating the troops amounts in a hammer-type offensive army.</dl>
-    <dt>TSA : </dt><dl>Tool for estimating the Tournament Square (TS) of an ennemy.</dl>
-    <dt>Troop Research : </dt><dl>Tool defining the minimum troop amount for having efficient troop upgrades.</dl>
-</dl>
+<div class="row">
+    <h3 class="page-header">{{ 'TEXTS.HOME.WELCOME' | translate }} xTools Project <sup class="label label-info">LITE</sup></h3>
+    <p class="text-justified">{{ 'TEXTS.HOME.T_01' | translate }} <abbr title="Massive Multiplayer Online Real-Time Strategy">MMORTS</abbr> <a href="http://kingdoms.travian.com" target="_blank">Travian : Kingdoms <i class="fa fa-fw fa-external-link"></i></a>.</p>
+    <p class="text-justified">{{ 'TEXTS.HOME.T_02' | translate }}</p>
+    <p class="text-justified">{{ 'TEXTS.HOME.T_03' | translate }}</p>
+    <p class="text-justified">{{ 'TEXTS.HOME.T_04' | translate }}</p>
+    <hr/>
+</div>
+<div class="row">
+    <h4 class="page-header">{{ 'TEXTS.HOME.AVAIL_LANG' | translate }} : </h4>
+    <div class="col-xs-12">
+        <ul class="list-inline">
+            <li ng-repeat="flag in flags"><i class="fa fa-fw flag flag-bordered flag-{{ flag }}"></i></li>
+        </ul>
+    </div>
+    <hr/>
+</div>
+<div class="row table-responsive">
+    <h4 class="page-header">{{ 'TEXTS.HOME.TOOL_LIST' | translate }} :</h4>
+    <table class="table table-condensed table-striped">
+        <tr class="bg-primary">
+            <th class="bg-primary">Tool Name</th>
+            <th class="bg-primary">Tool Link</th>
+            <th class="bg-primary">Tool Description</th>
+        </tr>
+        <tr>
+            <th>Hammerbuilder</th>
+            <td><a href="#/hammerbuilder"><i class="fa fa-fw fa-link"></i></a></td>
+            <td>{{ 'TEXTS.HB.DESC' | translate }}</td>
+        </tr>
+        <tr>
+            <th>TSA</th>
+            <td><a href="#/tsa"><i class="fa fa-fw fa-link"></i></a></td>
+            <td>{{ 'TEXTS.TSA.DESC' | translate }}</td>
+        </tr>
+        <tr>
+            <th>Troop Research</th>
+            <td><a href="#/troopresearch"><i class="fa fa-fw fa-link"></i></a></td>
+            <td>{{ 'TEXTS.TSA.DESC' | translate }}</td>
+        </tr>
+    </table>
+</div>

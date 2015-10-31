@@ -46,7 +46,7 @@
                             <a href id="tool_list" uib-dropdown-toggle><i class="fa fa-fw fa-cog"></i> <span translate="TOPMENU.HELPERS"></span> <i class="fa fa-fw fa-angle-down"></i></a>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="tool_list">
                                 <!-- <li><a href="#/parser"><i class="fa fa-fw fa-square-o"></i> Parser</a></li> -->
-                                <li><a href="#/comparator"><i class="fa fa-fw fa-square-o"></i> Troop Research</a></li>
+                                <li><a href="#/troopresearch"><i class="fa fa-fw fa-square-o"></i> Troop Research</a></li>
                             </ul>
                         </li>
                         <li><a href="#/about"><i class="fa fa-fw fa-info"></i><span translate="TOPMENU.ABOUT"></span></a></li>
@@ -55,21 +55,8 @@
                         <li uib-dropdown>
                             <a href id="lang_menu" uib-dropdown-toggle><i class="fa fa-fw flag flag-{{language}}"></i> <i class="fa fa-fw fa-angle-down"></i></a>
                             <ul class="dropdown-menu" role="menu" aria-labelledby="lang_menu">
-                                <li><a href title="France" ng-click="changeLanguage('fr')"><i class="fa fa-fw flag flag-fr"></i> Fran&ccedil;ais</a></li>
-                                <li><a href title="United Kingdom" ng-click="changeLanguage('en')"><i class="fa fa-fw flag flag-gb"></i> English</a></li>
-                                <!--
-                                <li><a href title="Türkiye"><i class="fa fa-fw flag flag-tr"></i> Türkiye</a></li>
-                                <li><a href title="Danmark"><i class="fa fa-fw flag flag-dk"></i> Danmark</a></li>
-                                <li><a href title="Nederland"><i class="fa fa-fw flag flag-nl"></i> Nederland</a></li>
-                                <li><a href title="Deutschland"><i class="fa fa-fw flag flag-de"></i> Deutschland</a></li>
-                                <li><a href title="Italia"><i class="fa fa-fw flag flag-it"></i> Italia</a></li>
-                                <li><a href title="Magyarország"><i class="fa fa-fw flag flag-hu"></i> Magyarország</a></li>
-                                <li><a href title="United Kingdom" ng-click="changeLanguage('en')"><i class="fa fa-fw flag flag-gb"></i> English</a></li>
-                                <li><a href title="Россия"><i class="fa fa-fw flag flag-ru"></i> Россия</a></li>
-                                <li><a href title="Česká republika"><i class="fa fa-fw flag flag-cz"></i> Česká republika</a></li>
-                                <li><a href title="Polska"><i class="fa fa-fw flag flag-pl"></i> Polska</a></li>
-                                <li><a href title="United States"><i class="fa fa-fw flag flag-us"></i> American</a></li>
-                                -->
+                                <li><a href ng-click="changeLanguage('fr')"><i class="fa fa-fw flag flag-fr"></i> Français</a></li>
+                                <li><a href ng-click="changeLanguage('en')"><i class="fa fa-fw flag flag-gb"></i> English</a></li>
                             </ul>
                         </li>
                         <li><a href="https://github.com/Knudian/xToolsProject_Lite/fork" target="_blank"><i class="fa fa-fw fa-github"></i> Fork me on Github <i class="fa fa-fw fa-external-link"></i></a></li>
@@ -97,6 +84,7 @@
         <!-- Application Start  --><script src="js/application/core.js"></script>
         <!-- Provider : Routes  --><script src="js/application/providers/routes.js"></script>
         <!-- Provider : Langs   --><script src="js/application/providers/translate.js"></script>
+        <!-- Controller : Home  --><script src="js/application/controllers/home.js"></script>
         <!-- Controller : Lang  --><script src="js/application/controllers/language.js"></script>
         <!-- Controller : HB    --><script src="js/application/controllers/tools/hammer_builder.js"></script>
         <!-- Controller : TSA   --><script src="js/application/controllers/tools/tsa.js"></script>

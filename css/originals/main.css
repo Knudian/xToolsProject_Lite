@@ -12,7 +12,7 @@
 ng\:form { display: block;}
 /* ===== Tweaking the .navbar-fixed-top ===== */
 body {
-    padding-top: 55px;
+    padding-top: 60px;
     padding-bottom : 55px;
     min-height: 100vh;
 }
@@ -24,7 +24,8 @@ body {
 .navbar-fixed-second {margin-top:50px;}
 
 /* ===== LangBar Style ===== */
-.flag { width: 18px; height: 12px; box-shadow: 0 0 2px #777; margin-left:-10px;}
+.flag { width: 24px; height: 18px; margin-left:-10px; margin-bottom: -3px}
+.flag-bordered {margin-right: 5px;}
 
 /* ===== Modifying .page-header margin-top ===== */
 .page-header { margin-top: 20px; }

@@ -7,6 +7,8 @@ var translations = {};
     Further updates will be done by using JSON files in the $translate provider.
 */
 
+var translationsFlags = ["gb","fr"];
+
 translations.EN = {
 	TOPMENU : {
 		HOME : "Home page",
@@ -95,7 +97,17 @@ translations.EN = {
 	TEXTS : {
 		YES : "Yes",
 		NO : "No",
+        HOME: {
+            WELCOME : "Welcome on the",
+            T_01 : "This project is made of tools for the",
+            T_02 : "The Genesis of the the project was done by some french players, in order to have a more complete tool to help the players, and not to have many external tools scattered all over the web.",
+            T_03 : "This Lite version of the project include only the stand-alone tools. Those tools are the most used ones, and publishing those here, on GitHub, will make it easier for all developpers to improve an existing project.",
+            T_04 : "We hope you will enjoy all those tools, and help improve them.",
+            AVAIL_LANG : "Available languages",
+            TOOL_LIST : "Tools list"
+        },
 		TSA : {
+            DESC: "Tool for estimating the Tournament Square (TS) of an ennemy.",
 			PANEL : {
 				TIMES : "Times",
 				ATTACKER : "Attacker intelligence",
@@ -112,6 +124,7 @@ translations.EN = {
 			FORMAT : 'The dates and hours format, as written, is important, or the tool will bug.'
 		},
 		TR : {
+            DESC: "Tool defining the minimum troop amount for having efficient troop upgrades.",
 			MINIMAL_AMOUNT : "Minimal Amount",
 			LEVEL : "Level",
 			LVL : "Lvl",
@@ -119,6 +132,7 @@ translations.EN = {
 			NPC : "Use NPC ?"
 		},
 		HB : {
+            DESC : "Tool for estimating the troops amounts in a hammer-type offensive army.",
 			TRIBE_SELECT : "Select a Tribe",
 			DURATION_SET : "Set a duration",
 			BARRACKS : "Barracks",
@@ -294,7 +308,17 @@ translations.FR = {
 	TEXTS : {
 		YES : "Oui",
 		NO : "Non",
+        HOME: {
+            WELCOME : "Bienvenue sur",
+            T_01 : "Ce projet est constitué d'outils pour le",
+            T_02 : "L'origine de ce projet vient de joueurs français, afin d'avoir un outil plus complet, et non un ensemble dispersé au travers du Web.",
+            T_03 : "Cette version \"Lite\" inclut les outils ne nécessitant pas de base de données. Ce sont les plus simples, et en les publiant ici, sur GitHub, nous espérons que les développeurs accepteront d'améliorer ce projet.",
+            T_04 : "Nous espérons que vous apprécierez ces outils, et que vous aiderez à les améliorer.",
+            AVAIL_LANG : "Traduction disponibles",
+            TOOL_LIST : "Liste des outils"
+        },
 		TSA : {
+            DESC: "Outil permettant d'estimer le niveau de la Place du Tournoi (TS en anglais) d'un joueur ennemi.",
 			PANEL : {
 				TIMES : "Temps",
 				ATTACKER : "Informations sur l'attaquant",
@@ -311,6 +335,7 @@ translations.FR = {
 			FORMAT : 'Le format des heures doit respecter scrupuleusement le format indiqué, sinon l\'outil ne fonctionnera pas correctement.'
 		},
 		TR : {
+            DESC: "Outil permettant de définir le moment le plus adéquat pour lancer une amélioration de troupes.",
 			MINIMAL_AMOUNT : "Quantité minimale",
 			LEVEL : "Niveau",
 			LVL : "Niv.",
@@ -318,6 +343,7 @@ translations.FR = {
 			NPC : "Utiliser le NPC ?"
 		},
 		HB : {
+            DESC : "Outil permettant d'estimer les quantités de troupes pour une armée offensive de type missile.",
 			TRIBE_SELECT : "Choisir un peuple",
 			DURATION_SET : "Set a duration",
 			BARRACKS : "Caserne",
